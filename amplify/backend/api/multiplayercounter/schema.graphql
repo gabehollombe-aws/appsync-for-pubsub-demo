@@ -1,0 +1,23 @@
+schema {
+    mutation: Mutation,
+    subscription: Subscription
+    query: Query
+}
+
+type Query {
+    me: String! # Need to have something in Query or AppSync gets sad. This is just an unimplemented placehlder.
+}
+
+type Subscription {
+    counterChange(name: String!): Counter
+    @aws_subscribe(mutations: ["setCounter"])
+}
+
+type Mutation {
+    setCounter(name: String!, value: Int!): Counter!
+}
+
+type Counter {
+    value: Int!
+    name: String!
+}
