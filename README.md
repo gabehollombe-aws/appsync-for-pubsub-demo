@@ -7,5 +7,7 @@ This is a simple project to showcase how you can use an AWS AppSync Local Resolv
 Assuming you've already instaled and configured the AWS Amplify CLI, try this:
 
 ```
+mkdir appsync-for-pubsub-demo
+cd appsync-for-pubsub-demo
 amplify init --app https://github.com/gabehollombe-aws/appsync-for-pubsub-demo
 ```
