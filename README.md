@@ -2,7 +2,7 @@
 
 This is a simple project to showcase how you can use an AWS AppSync Local Resolver (also known as a NONE Data Source type) to get simple broadcast pub/sub over websockets. The client code is built in React.
 
-The demo application just shows two numeric input boxes on a web page. Whenever a user updates the value in one of the boxes, the value will get broadcast out to anyone else who has the same page open in their browser, and their value will update to whatever you set it to. There is no state managed in this application at all; it's just a simple example UI showing how to send data over a GraphQL mutation to an AWS AppSync server and how subscribe to updates in a similar fashion.
+The demo application has two sliders on a web page. Whenever a user updates the value in one of the sliders, the value will get broadcast out to anyone else who has the same page open in their browser, and their slider will update to whatever you set it to. There is no state managed in this application at all; it's just a simple example UI showing how to send data over a GraphQL mutation to an AWS AppSync server and how subscribe to updates in a similar fashion.
 
 ## What's it look like?
 
