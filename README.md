@@ -24,6 +24,13 @@ We handle creating the `NONE` AppSync Data Source and mapping the `setCounter` m
 
 ## How do I deploy and run this demo for myself?
 
+:warning: :warning: :warning: :warning: :warning: :warning: :warning: :warning: :warning: :warning: :warning: :warning:
+
+**Security Note**
+This example sets up an AppSync API endpoint that authenticates users with an API key. This approach is not recommended for production deploys. You proabbly want to switch to a different authentication mechanism before you deploy code like this in production. See [AWS AppSync Security](https://docs.aws.amazon.com/appsync/latest/devguide/security.html) for more information.
+
+:warning: :warning: :warning: :warning: :warning: :warning: :warning: :warning: :warning: :warning: :warning: :warning:
+
 ### One-Click Deploy with the Amplify Console
 
 Click the button to load the AWS Amplify Console, connect to GitHub and provide an IAM role for the build. The end to end back-end and front-end deployment should take around 5 minutes:
