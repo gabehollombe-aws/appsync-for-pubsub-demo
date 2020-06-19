@@ -1,4 +1,4 @@
-# Multiplayer Counter Pub Sub Demo
+# Multiplayer Slider Pub Sub with AWS AppSync
 
 This is a simple project to showcase how you can use an AWS AppSync Local Resolver (also known as a NONE Data Source type) to get simple broadcast pub/sub over websockets. The client code is built in React.
 
