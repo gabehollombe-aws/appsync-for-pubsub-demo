@@ -6,7 +6,7 @@ The demo application just shows two numeric input boxes on a web page. Whenever 
 
 ## What's it look like?
 
-![Demo GIF](https://github.com/gabehollombe-aws/appsync-for-pubsub-demo/blob/gh-pages/docs/MultiplayerSliderDemo.gif?raw=true)
+![Demo GIF](https://raw.githubusercontent.com/gabehollombe-aws/appsync-for-pubsub-demo/gh-pages/docs/MultiplayerSlidersDemo.gif)
 
 ## What's going on here?
 
