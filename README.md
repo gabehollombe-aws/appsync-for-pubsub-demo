@@ -22,9 +22,17 @@ The GraphQL schema is located in `amplify/backend/api/multiplayercounter/schema.
 
 We handle creating the `NONE` AppSync Data Source and mapping the `setCounter` mutation appropriately inside `amplify/backend/api/multiplayercounter/stacks/CustomResources.json`. Embedding VTL templates inside a JSON CloudFormation template file is sad, as you have to escape all the quotes. But it's a simple template that just maps our incoming data directly through to the response mapper so it's not so bad.
 
-## How do I run the demo?
+## How do I deploy and run this demo for myself?
 
-Assuming you've already instaled and configured the AWS Amplify CLI, you can run this command to automatically clone this repo, deploy this app in your AWS account, and boot up the local demo dev server:
+### One-Click Deploy with the Amplify Console
+
+Click the button to load the AWS Amplify Console, connect to GitHub and provide an IAM role for the build. The end to end back-end and front-end deployment should take around 5 minutes:
+
+[![amplifybutton](https://oneclick.amplifyapp.com/button.svg)](https://console.aws.amazon.com/amplify/home#/deploy?repo=https://github.com/gabehollombe-aws/appsync-for-pubsub-demo)
+
+### Get the code and run on my local dev workstation
+
+This project uses AWS Amplify to deploy resources in your account. Assuming you've already instaled and configured the [AWS Amplify CLI](https://docs.amplify.aws/cli), you can run this command to automatically clone this repo, deploy this app in your AWS account, and boot up the local demo dev server:
 
 ```
 mkdir appsync-for-pubsub-demo
