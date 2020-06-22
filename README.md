@@ -1,8 +1,8 @@
 # Multiplayer Slider Pub Sub with AWS AppSync
 
-This is a simple project to showcase how you can use an AWS AppSync Local Resolver (also known as a NONE Data Source type) to get simple broadcast pub/sub over websockets. The client code is built in React.
+This is a simple project to showcase how you can use an AWS AppSync API to facilitate realtime pub/sub interactions over websockets.
 
-The demo application has two sliders on a web page. Whenever a user updates the value in one of the sliders, the value will get broadcast out to anyone else who has the same page open in their browser, and their slider will update to whatever you set it to. There is no state managed in this application at all; it's just a simple example UI showing how to send data over a GraphQL mutation to an AWS AppSync server and how subscribe to updates in a similar fashion.
+The demo client application (built with React) has two sliders on a web page. Whenever a user updates the value in one of the sliders, the value will get broadcast out to anyone else who has the same page open in their browser, and their slider will update to whatever you set it to. There is no state managed in this application at all; it's just a simple example UI showing how to send data over a GraphQL mutation to an AWS AppSync server and how subscribe to updates in a similar fashion.
 
 ## What's it look like?
 
@@ -10,9 +10,9 @@ The demo application has two sliders on a web page. Whenever a user updates the 
 
 ## What's going on here?
 
-You can use AWS AppSync as a simple pub-sub system using something called [AppSync Local Resolvers](https://docs.aws.amazon.com/appsync/latest/devguide/tutorial-local-resolvers.html).  This pattern just involves creating a Request/Resolver mapping for a mutation that uses an AppSync Data Source type of NONE.  Then, you just map that mutation to a subscription, and the data will pass through from the client who issues the mutation to all subscribed clients.
+You can use [AWS AppSync](https://aws.amazon.com/appsync/) as a simple pub/sub system using a pattern called [AppSync Local Resolvers](https://docs.aws.amazon.com/appsync/latest/devguide/tutorial-local-resolvers.html).  This just involves creating a GraphQL mutation that resolves with an AppSync Data Source type of NONE.  Then, you just target that mutation with a subscription, and the data will pass through from the client who issues the mutation to all subscribed clients.
 
-AWS Amplify is a set of tooling and libraries that makes it easier to get started provisioning AWS resources and using them in your apps. This demo uses Amplify to provision the AppSync API and the other required resources to make this all work.
+AWS Amplify is a set of tooling and libraries that makes it easier to get started provisioning AWS resources and using them in your apps. This demo uses Amplify to provision the AppSync API and the other required resources to make this all work. To learn more about using AWS Amplify with React, see the [AWS Amplify Tutorial for React](https://docs.amplify.aws/start/q/integration/react).
 
 ## How does it work?
 
