@@ -27,7 +27,6 @@ const Counter = (props) => {
           authMode: 'API_KEY',
         }).subscribe({
         next: (data) => {
-          console.log('Got subscription data', data)
           const counterChange = data.value.data.counterChange
           setValue(counterChange.value)
         }
@@ -37,16 +36,14 @@ const Counter = (props) => {
     setupSubscription()
 
     return () => subscription.unsubscribe();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [props.name])  
 
-  const sendUpdate = async (value) => {
-    setValue(value)
-    await API.graphql(graphqlOperation(mutations.setCounter, { name: props.name, value}))
+  const sendUpdate = async (e) => {
+    await API.graphql(graphqlOperation(mutations.setCounter, { name: props.name, value: e.target.value}))
   }
 
   return (
-    <Slider value={value} onChange={v => setValue(v)} onAfterChange={sendUpdate} />
+    <input type="range" min="0" max="100" value={value} onChange={ (e) => setValue(e.target.value) } onMouseUp={sendUpdate} />
   )
 }
 
