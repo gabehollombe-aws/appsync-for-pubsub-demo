@@ -46,4 +46,5 @@ This project uses AWS Amplify to deploy resources in your account. Assuming you'
 mkdir appsync-for-pubsub-demo
 cd appsync-for-pubsub-demo
 amplify init --app https://github.com/gabehollombe-aws/appsync-for-pubsub-demo
+npm install 
 ```
